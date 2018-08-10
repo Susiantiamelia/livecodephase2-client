@@ -199,8 +199,9 @@ export default new Vuex.Store({
           console.log(result)
           for(let i = 0; i < result.data.length; i++){
             result.data[i].status = 'my'
-            commit('setarticle', result.data[i])
+            commit('setarticles', result.data[i])
           }
+          console.log(this.state.articles)
         })
         .catch(err => {
           swal({
